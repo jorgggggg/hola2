@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Te quiero?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #correct {
+            color: green;
+        }
+        #incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Te quiero?</h1>
+    <button id="yesButton">Sí</button>
+    <button id="noButton">No</button>
+
+    <script>
+        const body = document.body;
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+
+        yesButton.addEventListener('click', () => {
+            body.style.backgroundColor = 'green';
+            body.innerHTML = '<h1 id="correct">¡Respuesta correcta!</h1>';
+        });
+
+        noButton.addEventListener('click', () => {
+            body.style.backgroundColor = 'red';
+        });
+    </script>
+</body>
+</html>
